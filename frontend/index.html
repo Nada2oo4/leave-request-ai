@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LeaveAI | Leave Evaluation</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">✦</div>
+                <div>
+                    <h2>LeaveAI</h2>
+                    <span>Intelligent HR</span>
+                </div>
+            </div>
+
+            <nav>
+                <a class="nav-item active">
+                    <span>＋</span>
+                    New Request
+                </a>
+
+                <a class="nav-item">
+                    <span>▣</span>
+                    Leave Evaluation
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="ai-status">
+                    <span class="status-dot"></span>
+                    AI System Online
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">AI-POWERED HR SYSTEM</p>
+                    <h1>Leave Request Evaluation</h1>
+                    <p class="subtitle">
+                        Submit a leave request and let AI evaluate it against company policy.
+                    </p>
+                </div>
+
+                <div class="header-badge">
+                    <span>✦</span> Powered by AI
+                </div>
+            </header>
+
+
+            <section class="content-grid">
+
+                <!-- Form Card -->
+                <div class="card form-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h2>Leave Request</h2>
+                            <p>Enter the employee and leave details.</p>
+                        </div>
+
+                        <div class="step">01</div>
+                    </div>
+
+
+                    <form id="leaveForm">
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label>Employee ID</label>
+                                <input
+                                    type="number"
+                                    id="employee_id"
+                                    placeholder="e.g. 1024"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label>Country</label>
+
+                                <select id="country" required>
+                                    <option value="">Select country</option>
+                                    <option value="Egypt">Egypt</option>
+                                    <option value="KSA">KSA</option>
+                                    <option value="Jordan">Jordan</option>
+                                    <option value="Qatar">Qatar</option>
+                                    <option value="UAE">UAE</option>
+                                    <option value="Lebanon">Lebanon</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Leave Type</label>
+
+                            <select id="leave_type" required>
+                                <option value="">Select leave type</option>
+                                <option value="Annual Leave">Annual Leave</option>
+                                <option value="Sick Leave">Sick Leave</option>
+                                <option value="Marriage Leave">Marriage Leave</option>
+                                <option value="Maternity / Paternity Leaves">
+                                    Maternity / Paternity Leaves
+                                </option>
+                                <option value="Official and Public Holidays">
+                                    Official and Public Holidays
+                                </option>
+                                <option value="Unpaid Leave">Unpaid Leave</option>
+                                <option value="Compassionate Leave">
+                                    Compassionate Leave
+                                </option>
+                                <option value="Hajj Leave">Hajj Leave</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <input
+                                    type="date"
+                                    id="start_date"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <input
+                                    type="date"
+                                    id="end_date"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Date of Joining <span>(optional)</span></label>
+
+                            <input
+                                type="date"
+                                id="date_of_joining"
+                            >
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>Reason</label>
+
+                            <textarea
+                                id="reason"
+                                rows="4"
+                                placeholder="Briefly describe the reason for your leave..."
+                                required
+                            ></textarea>
+                        </div>
+
+
+                        <!-- Upload -->
+                        <div class="form-group">
+                            <label>Supporting Document <span>(if required)</span></label>
+
+                            <label class="upload-box" for="attachment">
+
+                                <div class="upload-icon">↑</div>
+
+                                <div>
+                                    <strong>Upload document</strong>
+                                    <p>PDF, PNG, JPG or JPEG</p>
+                                </div>
+
+                                <input
+                                    type="file"
+                                    id="attachment"
+                                    accept=".pdf,.png,.jpg,.jpeg"
+                                >
+
+                            </label>
+
+                            <div id="fileName" class="file-name"></div>
+                        </div>
+
+
+                        <button type="submit" id="submitBtn">
+                            <span>✦</span>
+                            Evaluate Request
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Result Card -->
+                <div class="card result-card">
+
+                    <div class="card-header">
+                        <div>
+                            <h2>AI Evaluation</h2>
+                            <p>Decision generated from company policy.</p>
+                        </div>
+
+                        <div class="step">02</div>
+                    </div>
+
+
+                    <div id="resultContainer" class="result-placeholder">
+
+                        <div class="placeholder-icon">✦</div>
+
+                        <h3>Awaiting Request</h3>
+
+                        <p>
+                            Submit a leave request to see the AI evaluation,
+                            policy basis, and supporting evidence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
