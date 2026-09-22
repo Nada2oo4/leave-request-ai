@@ -3,4 +3,6 @@
 __pycache__/
 *.pyc
 uploads/
+sample_medical_certificate.png
 .DS_Store
+*.log
