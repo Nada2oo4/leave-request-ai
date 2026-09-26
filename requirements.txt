@@ -9,4 +9,4 @@ langgraph
 langchain-text-splitters
 pypdf
 python-docx
-pinecone
+pineconesentence-transformers
