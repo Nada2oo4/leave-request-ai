@@ -1,4 +1,4 @@
-🤖 Leave Request AI Evaluation System
+**🤖 Leave Request AI Evaluation System**
 
 An AI-powered leave request evaluation system that evaluates employee leave requests against a company’s Leave and Absence Policy.
 
@@ -7,7 +7,7 @@ The system combines FastAPI, LangGraph, RAG, Pinecone, Sentence Transformers, an
 Built as part of an AI Engineering Internship at Inspire for Solutions Development.
 
 ---
-🚀 Key Highlights
+**🚀 Key Highlights**
 
 *  Multi-step AI workflow using LangGraph
 *  RAG pipeline for retrieving relevant policy rules
@@ -21,9 +21,8 @@ Built as part of an AI Engineering Internship at Inspire for Solutions Developme
 *  Explainable decisions with relevant policy evidence
 *  Azure App Service + GitHub Actions deployment
 
-⸻
-
-🛠️ Tech Stack
+---
+**🛠️ Tech Stack**
 
 Core technologies
 
@@ -44,7 +43,7 @@ Core technologies
 
 ⸻
 
-🧠 System Architecture
+**🧠 System Architecture**
 
                          Employee
                             │
@@ -103,9 +102,9 @@ Core technologies
                               │ REVIEW_REQUIRED      │
                               └──────────────────────┘
 
-⸻
+---
 
-🔄 How It Works
+**🔄 How It Works**
 
 1. Request Validation
 
@@ -175,9 +174,9 @@ ATTACHMENT_REQUIRED
 
 The system also provides supporting policy evidence for the decision.
 
-⸻
+---
 
-🌍 Supported Countries
+**🌍 Supported Countries**
 
 The policy retrieval system supports:
 
@@ -188,44 +187,9 @@ The policy retrieval system supports:
 * 🇦🇪 UAE
 * 🇱🇧 Lebanon
 
-⸻
+---
 
-📂 Project Structure
-
-leave-request-ai/
-│
-├── main.py
-├── requirements.txt
-│
-├── graph/
-│   ├── state.py
-│   └── workflow.py
-│
-├── models/
-│   ├── enums.py
-│   └── leave_request.py
-│
-├── services/
-│   ├── attachment_analyzer.py
-│   ├── evaluator.py
-│   └── policy_retriver.py
-│
-├── policy/
-│   ├── leave_and_absence_policy.pdf
-│   └── vector_store.py
-│
-├── ingestion/
-│   └── ingest_policy.py
-│
-├── frontend/
-│   └── ...
-│
-└── .github/
-    └── workflows/
-
-⸻
-
-🔌 API
+**🔌 API**
 
 The backend is exposed through a FastAPI REST API.
 
@@ -249,9 +213,9 @@ Example request structure
 
 Field names and accepted values should match the Pydantic models implemented in the project.
 
-⸻
+---
 
-💻 Local Setup
+**💻 Local Setup**
 
 1. Clone the repository
 
@@ -303,9 +267,9 @@ Then open:
 
 http://127.0.0.1:5500
 
-⸻
+---
 
-☁️ Deployment
+**☁️ Deployment**
 
 The application is configured for deployment using:
 
@@ -328,9 +292,9 @@ gunicorn --bind=0.0.0.0 --timeout 600 main:app -k uvicorn.workers.UvicornWorker
 
 Environment variables such as API keys are configured through Azure App Service environment settings rather than stored in the repository.
 
-⸻
+---
 
-🔐 Security
+**🔐 Security**
 
 Sensitive credentials are stored as environment variables.
 
@@ -344,9 +308,9 @@ uploads/
 
 API keys should never be committed to the repository.
 
-⸻
+---
 
-📸 Screenshots / Demo
+**📸 Screenshots / Demo**
 
 Screenshots and a short demo of the application can be added here.
 
@@ -365,9 +329,9 @@ Example Evaluation
 <img width="1280" height="800" alt="Screenshot 2026-09-17 at 8 23 18 PM" src="https://github.com/user-attachments/assets/6755f118-86f4-47b1-9dec-cf502e799f04" />
 
 
-⸻
+---
 
-Future Improvements
+*Future Improvements*
 
 Potential future improvements include:
 
@@ -376,9 +340,9 @@ Potential future improvements include:
 * Database integration for employee and leave records
 * Monitoring and observability
 
-⸻
+---
 
-👩‍💻 Project Context
+**👩‍💻 Project Context**
 
 This project was developed during an AI Engineering Internship at Inspire for Solutions Development.
 
