@@ -41,7 +41,7 @@ Core technologies
 * Azure App Service
 * GitHub Actions
 
-⸻
+---
 
 **🧠 System Architecture**
 
