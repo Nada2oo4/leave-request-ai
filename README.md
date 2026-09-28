@@ -6,7 +6,7 @@ The system combines FastAPI, LangGraph, RAG, Pinecone, Sentence Transformers, an
 
 Built as part of an AI Engineering Internship at Inspire for Solutions Development.
 
-⸻
+⸻-------------------------------------------------------------------------------------------------------------------
 
 🚀 Key Highlights
 
